@@ -5,8 +5,8 @@ pipeline {
       steps {
         echo 'Build'
         sh '''
-                cd scripts
-                build.sh
+cd scripts
+./build.sh
                 '''
       }
     }
@@ -14,9 +14,8 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Test'
-        sh '''
-                cd scripts
-                test.sh
+        sh '''cd scripts
+./test.sh
                 '''
       }
     }
@@ -24,8 +23,7 @@ pipeline {
     stage('Deliver') {
       steps {
         echo 'Deliver'
-        sh '''
-                docker build -t build1  
+        sh '''docker build -t build1  
                 '''
       }
     }
