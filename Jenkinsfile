@@ -1,9 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout from VCS') {
+    stage('Build') {
       steps {
-        echo 'Starting the pipeline'
+        script {
+          scripts/build.sh
+        }
+
       }
     }
 
