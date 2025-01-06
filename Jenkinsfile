@@ -29,7 +29,4 @@ cd scripts
     }
 
   }
-  triggers {
-    pollSCM('* * * * *')
-  }
 }
